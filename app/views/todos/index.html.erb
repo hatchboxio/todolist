@@ -1,14 +1,9 @@
-<div class="jumbotron">
-  <%= form_for Todo.new do |f| %>
-    <div class="form-group mr-2">
-      <%= f.text_field :description, placeholder: "Add a new todo...", autofocus: true, class: "form-control" %>
-    </div>
+<div class="container-fluid p-5 bg-white shadow">
+  <%= form_with model: Todo.new, class: "d-flex" do |f| %>
+    <%= f.text_field :description, placeholder: "Add a new todo...", autofocus: true, class: "form-control" %>
 
-    <div class="form-group">
-      <%= f.submit "Add this todo", class: "btn btn-primary" %>
-      <button type="reset" value="reset" class="btn btn-secondary">Cancel</button>
-
-    </div>
+    <%= f.submit "Add", class: "btn btn-primary ms-2" %>
+    <button type="reset" value="reset" class="btn btn-secondary ms-2">Cancel</button>
   <% end %>
 
   <br />
