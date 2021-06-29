@@ -83,3 +83,9 @@ production:
   database: todolist_production
   username: todolist
   password: <%= ENV['TODOLIST_DATABASE_PASSWORD'] %>
+
+staging:
+  <<: *default
+  database: todolist_staging
+  username: todolist
+  password: <%= ENV['TODOLIST_DATABASE_PASSWORD'] %>
