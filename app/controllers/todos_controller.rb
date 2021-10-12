@@ -4,7 +4,7 @@ class TodosController < ApplicationController
   # GET /todos
   # GET /todos.json
   def index
-    @todos = Todo.order(completed_at: :desc, created_at: :asc)
+    @todos = Todo.order(completed_at: :desc, created_at: :desc)
   end
 
   # GET /todos/1
@@ -28,6 +28,7 @@ class TodosController < ApplicationController
 
     respond_to do |format|
       if @todo.save
+        format.turbo_stream
         format.html { redirect_to todos_path }
         format.json { render :show, status: :created, location: @todo }
       else

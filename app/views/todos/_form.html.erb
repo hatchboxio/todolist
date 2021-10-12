@@ -1,27 +1,6 @@
-<%= form_for(todo) do |f| %>
-  <% if todo.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(todo.errors.count, "error") %> prohibited this todo from being saved:</h2>
+<%= form_with model: Todo.new, id: "new_todo", class: "d-flex", data: { controller: "reset-form", action: "turbo:submit-end->reset-form#reset" } do |f| %>
+  <%= f.text_field :description, placeholder: "Add a new todo...", autofocus: true, class: "form-control" %>
 
-      <ul>
-      <% todo.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :description %>
-    <%= f.text_area :description %>
-  </div>
-
-  <div class="field">
-    <%= f.label :completed_at %>
-    <%= f.datetime_select :completed_at %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= f.submit "Add", class: "btn btn-primary ms-2" %>
+  <button type="reset" value="reset" class="btn btn-secondary ms-2">Cancel</button>
 <% end %>

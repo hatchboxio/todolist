@@ -1,0 +1,14 @@
+<div id="<%= dom_id(todo) %>" class="d-flex">
+  <%= form_for todo, url: complete_todo_path(todo) do |f| %>
+    <div class="form-check">
+      <%= f.check_box :completed_at, checked: todo.completed_at?, class: "form-check-input", id: dom_id(todo, :completed), onchange: "this.form.requestSubmit()" %>
+      <%= label_tag dom_id(todo, :completed), class: class_names("form-check-label", todo_class(todo)) do %>
+        <%= todo.description %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <%= button_to todo, method: :delete, class: "bg-transparent border-0 ms-2 text-muted", form_class: "d-inline" do %>
+    <%= fa_icon "times" %>
+  <% end %>
+</div>

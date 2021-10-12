@@ -1,30 +1,13 @@
 <div class="container-fluid p-5 bg-white shadow">
-  <%= form_with model: Todo.new, class: "d-flex" do |f| %>
-    <%= f.text_field :description, placeholder: "Add a new todo...", autofocus: true, class: "form-control" %>
-
-    <%= f.submit "Add", class: "btn btn-primary ms-2" %>
-    <button type="reset" value="reset" class="btn btn-secondary ms-2">Cancel</button>
-  <% end %>
-
+  <%= render "form" %>
   <br />
 
   <div>
     <h5><%= Todo.complete.count %> / <%= Todo.all.count %> Complete</h5>
     <hr />
 
-    <% @todos.each do |todo| %>
-      <div id="<%= dom_id(todo) %>" class="<%= todo_class(todo) %>">
-        <%= form_for todo, url: complete_todo_path(todo) do |f| %>
-          <div class="form-check">
-            <label class="custom-control custom-checkbox">
-              <%= f.check_box :completed_at, checked: todo.completed_at?, class: "custom-control-input" %>
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description"><%= todo.description %></span>
-              <%= link_to fa_icon("times"), todo, method: :delete, class: "text-light ml-2" %>
-            </label>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
+    <div id="todos">
+      <%= render @todos %>
+    </div>
   </div>
 </div>

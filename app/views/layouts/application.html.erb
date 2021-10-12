@@ -4,12 +4,13 @@
     <title>My Personal Todo List</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.4/js/tether.min.js', 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/b657e5311a.js" crossorigin="anonymous"></script>
   </head>
 
-  <body>
-    <nav class="navbar fixed-top navbar-light bg-white">
+  <body class="bg-light">
+    <nav class="navbar navbar-light bg-white border-bottom mb-5">
       <div class="container flex">
         <a class="navbar-brand" href="/">
           My Todo List (<%= Rails.env %>)
@@ -18,7 +19,6 @@
         <%= link_to "Powered by Hatchbox.io", "https://hatchbox.io", class: "btn btn-outline-primary" %>
       </div>
     </nav>
-
 
     <div class="container">
       <%= yield %>
