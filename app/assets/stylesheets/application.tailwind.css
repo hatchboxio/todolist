@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@plugin "@tailwindcss/aspect-ratio";
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography";
+
+.btn {
+  @apply px-2 py-1.5 rounded-md text-[0.8125rem]/5;
+}
+
+.btn-primary {
+  @apply bg-blue-600 text-white;
+}
+
+.btn-danger {
+  @apply bg-red-600 text-white;
+}

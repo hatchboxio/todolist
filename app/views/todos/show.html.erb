@@ -6,5 +6,5 @@
   <%= link_to "Edit this todo", edit_todo_path(@todo) %> |
   <%= link_to "Back to todos", todos_path %>
 
-  <%= button_to "Destroy this todo", @todo, method: :delete %>
+  <%= button_to "Destroy this todo", @todo, method: :delete, class: "btn btn-danger", data: {turbo_confirm: "Are you sure?"} %>
 </div>

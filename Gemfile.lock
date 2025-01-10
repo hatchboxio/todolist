@@ -126,6 +126,7 @@ GEM
     marcel (1.0.4)
     matrix (0.4.2)
     mini_mime (1.1.5)
+    mini_portile2 (2.8.8)
     minitest (5.23.1)
     msgpack (1.7.2)
     net-imap (0.4.13)
@@ -138,17 +139,8 @@ GEM
     net-smtp (0.5.0)
       net-protocol
     nio4r (2.7.3)
-    nokogiri (1.16.6-aarch64-linux)
-      racc (~> 1.4)
-    nokogiri (1.16.6-arm-linux)
-      racc (~> 1.4)
-    nokogiri (1.16.6-arm64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.16.6-x86-linux)
-      racc (~> 1.4)
-    nokogiri (1.16.6-x86_64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.16.6-x86_64-linux)
+    nokogiri (1.16.6)
+      mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     parallel (1.25.1)
     parser (3.3.3.0)
@@ -249,20 +241,22 @@ GEM
       actionpack (>= 6.1)
       activesupport (>= 6.1)
       sprockets (>= 3.0.0)
-    sqlite3 (2.0.2-aarch64-linux-gnu)
-    sqlite3 (2.0.2-aarch64-linux-musl)
-    sqlite3 (2.0.2-arm-linux-gnu)
-    sqlite3 (2.0.2-arm-linux-musl)
-    sqlite3 (2.0.2-arm64-darwin)
-    sqlite3 (2.0.2-x86-linux-gnu)
-    sqlite3 (2.0.2-x86-linux-musl)
-    sqlite3 (2.0.2-x86_64-darwin)
-    sqlite3 (2.0.2-x86_64-linux-gnu)
-    sqlite3 (2.0.2-x86_64-linux-musl)
+    sqlite3 (2.0.2)
+      mini_portile2 (~> 2.8.0)
     stimulus-rails (1.3.3)
       railties (>= 6.0.0)
     stringio (3.1.1)
     strscan (3.1.0)
+    tailwindcss-rails (3.1.0)
+      railties (>= 7.0.0)
+      tailwindcss-ruby
+    tailwindcss-ruby (4.0.0.beta.9)
+    tailwindcss-ruby (4.0.0.beta.9-aarch64-linux-gnu)
+    tailwindcss-ruby (4.0.0.beta.9-aarch64-linux-musl)
+    tailwindcss-ruby (4.0.0.beta.9-arm64-darwin)
+    tailwindcss-ruby (4.0.0.beta.9-x86_64-darwin)
+    tailwindcss-ruby (4.0.0.beta.9-x86_64-linux-gnu)
+    tailwindcss-ruby (4.0.0.beta.9-x86_64-linux-musl)
     thor (1.3.1)
     timeout (0.4.1)
     turbo-rails (2.0.5)
@@ -317,9 +311,11 @@ DEPENDENCIES
   sprockets-rails
   sqlite3 (>= 1.4)
   stimulus-rails
+  tailwindcss-rails (~> 3.1)
+  tailwindcss-ruby (~> 4.0.0.beta.9)
   turbo-rails
   tzinfo-data
   web-console
 
 BUNDLED WITH
-   2.5.13
+   2.6.2
