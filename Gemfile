@@ -54,6 +54,9 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+
+  # TODO: Remove for Rails 8.2+
+  gem "minitest", "< 6.0.0"
 end
 
 gem "tailwindcss-rails", "~> 4.2.0"
