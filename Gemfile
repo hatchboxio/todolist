@@ -60,3 +60,5 @@ group :test do
 end
 
 gem "tailwindcss-rails", "~> 4.2.0"
+
+gem "appsignal", "~> 4.8"
