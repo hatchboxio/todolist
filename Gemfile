@@ -56,7 +56,7 @@ group :test do
   gem "selenium-webdriver"
 
   # TODO: Remove for Rails 8.2+
-  gem "minitest", "< 6.0.0"
+  gem "minitest", "< 7.0.0"
 end
 
 gem "tailwindcss-rails", "~> 4.2.0"
