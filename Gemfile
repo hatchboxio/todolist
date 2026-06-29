@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 8.0.0"
+gem "rails", "~> 8.1.0"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 # Use sqlite3 as the database for Active Record
@@ -54,11 +54,8 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
-
-  # TODO: Remove for Rails 8.2+
-  gem "minitest", "< 6.0.0"
 end
 
-gem "tailwindcss-rails", "~> 4.2.0"
+gem "tailwindcss-rails", "~> 4.2"
 
 gem "appsignal", "~> 4.8"
