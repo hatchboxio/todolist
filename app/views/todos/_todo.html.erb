@@ -4,4 +4,10 @@
     <%= todo.description %>
   </p>
 
+  <% if todo.thumbnail.attached? %>
+    <p>
+      <%= image_tag url_for(todo.thumbnail), alt: todo.image.filename.to_s, width: Todo::THUMBNAIL_WIDTH, id: "#{dom_id todo}_thumbnail" %>
+      <br><%= link_to "Original (#{number_to_human_size todo.image.byte_size})", url_for(todo.image) %>
+    </p>
+  <% end %>
 </div>

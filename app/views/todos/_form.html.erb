@@ -17,6 +17,11 @@
   </div>
 
   <div class="mt-2">
+    <%= form.label :image, style: "display: block" %>
+    <%= form.file_field :image, accept: "image/*" %>
+  </div>
+
+  <div class="mt-2">
     <%= form.submit class: "btn btn-primary" %>
   </div>
 <% end %>

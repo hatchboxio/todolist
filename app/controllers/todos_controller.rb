@@ -25,6 +25,7 @@ class TodosController < ApplicationController
 
     respond_to do |format|
       if @todo.save
+        @todo.make_thumbnail if @todo.image.attached? && todo_params[:image]
         format.html { redirect_to todo_url(@todo), notice: "Todo was successfully created." }
         format.json { render :show, status: :created, location: @todo }
       else
@@ -38,6 +39,7 @@ class TodosController < ApplicationController
   def update
     respond_to do |format|
       if @todo.update(todo_params)
+        @todo.make_thumbnail if todo_params[:image]
         format.html { redirect_to todo_url(@todo), notice: "Todo was successfully updated." }
         format.json { render :show, status: :ok, location: @todo }
       else
@@ -65,6 +67,6 @@ class TodosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def todo_params
-      params.require(:todo).permit(:description)
+      params.require(:todo).permit(:description, :image)
     end
 end
