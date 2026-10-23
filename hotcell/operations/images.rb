@@ -6,7 +6,7 @@ require "vips"
 
 class ThumbnailOperation < HotCell::Operation
   operation "images.thumbnail"
-  limits deadline: 25
+  limits deadline: 30
 
   # Each worker handles one request, on one thread, inside the container's cpu quota
   before_worker_boot { Vips.concurrency_set 1 }
