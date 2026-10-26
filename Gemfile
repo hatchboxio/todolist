@@ -62,3 +62,4 @@ gem "appsignal", "~> 4.8"
 
 # Allow testing against multiple databases
 gem "pg", "~> 1.6"
+gem "hotcell-client", "~> 1.2"

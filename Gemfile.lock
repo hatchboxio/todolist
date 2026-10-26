@@ -110,6 +110,10 @@ GEM
     erubi (1.13.1)
     globalid (1.4.0)
       activesupport (>= 6.1)
+    hotcell-client (1.2.0)
+      activesupport (>= 7.1)
+      hotcell-core (= 1.2.0)
+    hotcell-core (1.2.0)
     i18n (1.15.2)
       concurrent-ruby (~> 1.0)
     importmap-rails (2.2.3)
@@ -365,6 +369,7 @@ DEPENDENCIES
   brakeman
   capybara
   debug
+  hotcell-client (~> 1.2)
   importmap-rails
   jbuilder
   pg (~> 1.6)
