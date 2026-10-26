@@ -54,7 +54,7 @@ RUN SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
 FROM base
 
 # Hatchbox nap test: a slow build step
-RUN echo "slow step" && sleep 50 && echo "slow step done"
+RUN echo "slow step 2" && sleep 50 && echo "slow step done"
 
 # Copy built artifacts: gems, application
 COPY --from=build "${BUNDLE_PATH}" "${BUNDLE_PATH}"
