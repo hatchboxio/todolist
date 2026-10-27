@@ -58,7 +58,7 @@ end
 
 gem "tailwindcss-rails", "~> 4.2"
 
-gem "appsignal", "~> 4.8"
+gem "appsignal", "~> 5.0"
 
 # Allow testing against multiple databases
 gem "pg", "~> 1.6"
